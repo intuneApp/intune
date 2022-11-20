@@ -1,14 +1,15 @@
 export interface ICandidate  {
     id: string;
-    name: string;
+    first_name: string;
+    middle_initial?: string;
+    last_name: string;
     email: string;
     phone: string;
-    desiredLocation: string[];
-    desiredRoles: string[];
-    desiredWorkType: string;
-    desiredStartDate: string;
+    desired_location: string[];
+    desired_roles: string[];
+    desired_work_type: string;
+    desired_start_date: string;
     accept_unpaid: boolean;
-    accept_remote: boolean;
     accept_parttime: boolean;
     parttime_hours: number;
     clubExperienceIDs: string[];
@@ -37,11 +38,12 @@ export interface IClubExperience {
 export interface IWorkExperience {
     id: string;
     company_name: string;
+    role: string;
     startDate: Date;
     endDate: Date;
     description: string;
     candidateID: string;
-    role: string;
+
 }
 
 export interface IResearchExperience {
@@ -84,6 +86,144 @@ export interface ICaseDemo {
     candidateID: string;
     link: string;
 }
+
+
+
+//list of all college majors
+export const MAJORS = [
+    "Accounting",
+    "Actuarial Science",
+    "Aerospace Engineering",
+    "African American Studies",
+    "American Studies",
+    "Animal Science",
+    "Anthropology",
+    "Applied Mathematics",
+    "Applied Physics",
+    "Architecture",
+    "Art",
+    "Art History",
+    "Asian Studies",
+    "Astronomy",
+    "Atmospheric Science",
+    "Biochemistry",
+    "Bioengineering",
+    "Biology",
+    "Biomedical Engineering",
+    "Biophysics",
+    "Business Administration",
+    "Chemical Engineering",
+    "Chemistry",
+    "Chinese",
+    "Civil Engineering",
+    "Classics",
+    "Clinical Psychology",
+    "Cognitive Science",
+    "Communication",
+    "Comparative Literature",
+    "Computer Engineering",
+    "Computer Science",
+    "Creative Writing",
+    "Criminal Justice",
+    "Criminology",
+    "Dance",
+    "Data Science",
+    "Design",
+    "Dietetics",
+    "Drama",
+    "Early Childhood Education",
+    "Economics",
+    "Education",
+    "Electrical Engineering",
+    "Engineering",
+    "English",
+    "Entrepreneurship",
+    "Environmental Engineering",
+    "Environmental Science",
+    "Environmental Studies",
+    "Ethnic Studies",
+    "European Studies",
+    "Film",
+    "Finance",
+    "Food Science",
+    "French",
+    "General Engineering",
+    "General Science",
+    "Geography",
+    "Geology",
+    "German",
+    "Global Studies",
+    "Graphic Design",
+    "Health Science",
+    "Healthcare Administration",
+    "History",
+    "Human Biology",
+    "Human Development",
+    "Human Resource Management",
+    "Human Services",
+    "Industrial Engineering",
+    "Information Technology",
+    "Information Systems",
+    "Interior Design",
+    "International Business",
+    "International Relations",
+    "Italian",
+    "Japanese",
+    "Jewish Studies",
+    "Journalism",
+    "Kinesiology",
+    "Landscape Architecture",
+    "Latin",
+    "Latin American Studies",
+    "Law",
+    "Legal Studies",
+    "Linguistics",
+    "Management",
+    "Marketing",
+    "Mathematics",
+    "Mechanical Engineering",
+    "Media Studies",
+    "Medical Technology",
+    "Medicine",
+    "Middle Eastern Studies",
+    "Military Science",
+    "Music",
+    "Neuroscience",
+    "Nursing",
+    "Nutrition",
+    "Philosophy",
+    "Photography",
+    "Physical Therapy",
+    "Physics",
+    "Political Science",
+    "Psychology",
+    "Public Health",
+    "Public Relations",
+    "Public Safety",
+    "Religious Studies",
+    "Russian",
+    "Social Work",
+    "Sociology",
+    "Spanish",
+    "Special Education",
+    "Speech Communication",
+    "Statistics",
+    "Studio Art",
+    "Supply Chain Management",
+    "Sustainable Business",
+    "Sustainable Energy",
+    "Theater",
+    "Urban Planning",
+    "Veterinary  Medicine",
+    "Visual Arts",
+    "Web Design",
+    "Writing",
+    "Zoology",
+    "Other"
+];
+
+
+
 
 
 

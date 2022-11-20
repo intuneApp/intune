@@ -3,7 +3,7 @@ import {DEV_DB_URL} from '@/constants'
 import Link from 'next/link';
 async function getTalents(){
     const db = new PocketBase(DEV_DB_URL)
-    const data = await db.records.getList('resume');
+    const data = await db.records.getList('candidate');
     return data?.items as any[]
     //remove cache
     
